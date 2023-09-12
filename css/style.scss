@@ -55,6 +55,7 @@ html {
 
 /* Estilos da Galeria */
 .gallery {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Até 4 colunas com tamanho mínimo de 200px */
   gap: 10px; /* Espaçamento entre as imagens */
