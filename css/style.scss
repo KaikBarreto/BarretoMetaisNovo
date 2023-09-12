@@ -140,6 +140,7 @@ html {
     width: 100%;
     max-width: 800px; /* Defina um valor máximo para o vídeo */
     height: 100%;
+    border-radius: 25px;
   }
 }
 
@@ -155,6 +156,8 @@ html {
     width: 100%;
     max-width: 800px; /* Defina um valor máximo para o vídeo */
     height: 100%;
+
+    border-radius: 25px;
   }
 }
 // video
@@ -220,14 +223,25 @@ body {
   margin-top: 50px;
 }
 
-.video2 {
-  border-radius: 25px;
-  margin-top: 50px;
+.video2bg {
   background-color: #0047ba;
-  padding-bottom: 20px;
+  width: 100% !important;
 
-  .heading_container {
-    color: $white !important;
+  border-radius: 50px;
+
+  .video2 {
+    margin-top: 50px;
+    padding-bottom: 20px;
+
+    .video-container {
+      iframe {
+        border-radius: 25px;
+      }
+    }
+
+    .heading_container {
+      color: $white !important;
+    }
   }
 }
 
@@ -793,11 +807,14 @@ body {
     box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.15);
     text-align: center;
 
+    border-radius: 25px;
+
     .img-box {
       position: relative;
 
       img {
         width: 100%;
+        border-radius: 25px 25px 0 0;
       }
     }
 
@@ -828,7 +845,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 45px 0;
+    margin: 45px auto;
     text-align: center;
 
     .img-box {
@@ -853,11 +870,12 @@ body {
         }
 
         h6 {
+          opacity: 0.5;
           margin-bottom: 0;
-          color: $primary1;
+          color: $white;
           font-weight: normal;
           font-size: 15px;
-          text-transform: uppercase;
+          // text-transform: uppercase;
         }
       }
 
@@ -903,42 +921,31 @@ body {
 
 // end client section
 
+.contactPage {
+  background-color: $white;
+}
+
 // contact section
 .contact_section {
   position: relative;
 
-  form {
-    margin-top: 45px;
-  }
-
-  input {
-    width: 100%;
-    border: none;
-    height: 50px;
-    margin-bottom: 25px;
-    padding-left: 15px;
-    background-color: transparent;
-    outline: none;
-    color: $black;
-    border: 1px solid #a5a5a5;
-
-    &::placeholder {
-      color: #1c1b1b;
+  .heading_container {
+    a {
+      display: inline-block;
+      padding: 10px 45px;
+      background-color: #011e41;
+      color: #e5e1e6;
+      border-radius: 5px;
+      transition: all 0.3s;
+      border: 1px solid #011e41;
+      margin-top: 15px;
     }
-
-    &.message-box {
-      height: 120px;
-    }
-  }
-
-  button {
-    font-family: "SofiaPro", sans-serif;
-    @include hero_btn($primary1, $white, 10px, 65px, 3px);
-    color: #fff;
-    margin-top: 10px;
   }
 
   .map_container {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
     height: 100%;
     min-height: 325px;
     overflow: hidden;
@@ -946,11 +953,23 @@ body {
 
     .map {
       height: 100%;
-
-      #googleMap {
-        height: 100%;
-      }
     }
+  }
+}
+
+#googleMap {
+  height: 40vh;
+  width: 45vw;
+  border-radius: 20px;
+
+  border: 5px solid $primary1;
+  box-shadow: 5px 5px 10px rgba($color: #444, $alpha: 0.40);
+}
+
+@media (max-width: 768px) {
+  #googleMap {
+    display: block;
+    margin: 0 auto;
   }
 }
 
