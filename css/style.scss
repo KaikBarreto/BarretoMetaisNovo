@@ -53,6 +53,21 @@ html {
   }
 }
 
+.carImages {
+  background-color: $white !important;
+
+  img {
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+.faixa {
+  img {
+    max-width: 100%;
+  }
+}
+
 /* Estilos da Galeria */
 .gallery {
   margin: 0 auto;
@@ -674,6 +689,7 @@ body {
 
 .service_section {
   text-align: center;
+  margin-bottom: 60px;
 
   .heading_container {
     align-items: center;
@@ -964,7 +980,7 @@ body {
   border-radius: 20px;
 
   border: 5px solid $primary1;
-  box-shadow: 5px 5px 10px rgba($color: #444, $alpha: 0.40);
+  box-shadow: 5px 5px 10px rgba($color: #444, $alpha: 0.4);
 }
 
 @media (max-width: 768px) {
