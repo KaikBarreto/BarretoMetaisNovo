@@ -32,6 +32,12 @@
     <!-- icon -->
     <link rel="shortcut icon" href="../images/ícone.ico" type="image/x-icon" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
@@ -375,6 +381,55 @@
     </section>
 
     <!-- end about section -->
+
+    <div class="SliderDeFotos">
+      <section class="section slider__section">
+        <div class="container slider__wrapper">
+          <div class="slider__column splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img
+                    src="./images/gallery/galleryImg (4).webp"
+                    alt="Slider"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="./images/gallery/galleryImg (14).webp"
+                    alt="Slider"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="./images/gallery/galleryImg (17).webp"
+                    alt="Slider"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="images/gallery/galleryImg (1).webp"
+                    alt="Slider"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="images/gallery/galleryImg (42).webp"
+                    alt="Slider"
+                  />
+                </li>
+                <li class="splide__slide">
+                  <img
+                    src="images/gallery/galleryImg (38).webp"
+                    alt="Slider"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- video 2  -->
 
@@ -742,6 +797,35 @@
     ></script>
     <!-- bootstrap js -->
     <script src="js/bootstrap.js"></script>
+    <script>
+      // slider
+      const splide = new Splide(".splide", {
+        // Optional parameters
+        start: 1,
+        perPage: 1.5,
+        perMove: 1,
+        gap: 20,
+        type: "loop",
+        drag: "free",
+        snap: false,
+        interval: 3000,
+        arrows: true,
+        pagination: true,
+        rewind: true,
+        rewindByDrag: true,
+        lazyLoad: true,
+
+        // Responsive breakpoint
+        breakpoints: {
+          768: {
+            perPage: 1,
+            snap: true,
+          },
+        },
+      });
+
+      splide.mount();
+    </script>
     <script src="js/custom.js"></script>
   </body>
 </html>

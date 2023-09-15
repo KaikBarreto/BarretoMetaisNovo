@@ -94,3 +94,5 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+
