@@ -687,6 +687,13 @@ body {
   }
 }
 
+.photoBanner {
+  img {
+    width: 100vw !important;
+    height: auto;
+  }
+}
+
 .service_section {
   text-align: center;
   margin-bottom: 60px;
